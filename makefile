@@ -30,12 +30,12 @@ $(EXEC) : $(OBJS)
 
 # target sllist-driver.o depends on both sllist-driver.cpp and sllist.hpp
 # and is created with command $(CXX) given the options $(CXX_FLAGS)
-algoq1-driver.o : algoq1.cpp algoq1.hpp
+algoq1-driver.o : algoq1-driver.cpp algoq1.cpp algoq1.hpp
 	$(CXX) $(CXX_FLAGS) -c algoq1-driver.cpp -o algoq1-driver.o
 	
 # target sllist.o depends on both sllist.cpp and sllist.hpp
 # and is created with command $(CXX) given the options $(CXX_FLAGS)
-algoq1.o : algoq1.cpp algoq1.hpp
+algoq1.o : algoq1-driver.cpp algoq1.cpp algoq1.hpp
 	$(CXX) $(CXX_FLAGS) -c algoq1.cpp -o algoq1.o
 
 # says that clean is not the name of a target file but simply the name for
